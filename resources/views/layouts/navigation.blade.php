@@ -8,7 +8,7 @@
                     <a href="{{ route('dashboard') }}">
                         <div class="pr-3">
 
-                            <img class="h-8 fill-current text-gray-600" src="/geogramlogo/geogramlogo.svg">
+                            <img class="block h-8 fill-current text-gray-600" src="/geogramlogo/geogramlogo.svg">
                             <!-- <div class="border-gray-600 border-l-2">Geo gram</div> -->
                         </div>
 
