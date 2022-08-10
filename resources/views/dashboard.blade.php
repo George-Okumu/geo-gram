@@ -6,7 +6,7 @@
         <div class="mt-4">
             <div class="w-full md:w-3/4 text-center">
                 <div class="text-left pt-3">
-                    <span class="text-base text-gray-700 text-2xl mr-2">George Okumu</span>
+                    <span class="text-base text-gray-700 text-2xl mr-2">{{ Auth::user()->username }}</span>
                     <span class="text-base font-semibold text-gray-700 mr-2">
                         <button class="bg-transparent hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-600 hover:border-transparent rounded">Edit Profile</button>
                     </span>
@@ -25,11 +25,15 @@
                 </div>
 
                 <div class="text-left pl-4 pt-3">
-                    <span class="text-lg font-bold text-gray-700 mr-2">George Okumu</span>
+                    <span class="text-lg font-bold text-gray-700 mr-2">{{ Auth::user()->profile->title }}</span>
                 </div>
 
                 <div class="text-left pl-4 pt-3">
-                    <p class="text-base font-medium text-blue-700 mr-2">#mentor #traveller #reader #fullstack-dev #android-java-dev</p>
+                    <span class="text-lg font-bold text-gray-700 mr-2"><b>Description: </b>{{ Auth::user()->profile->description }}</span>
+                </div>
+
+                <div class="text-left pl-4 pt-3">
+                    <p class="text-base font-medium text-blue-700 mr-2">{{ Auth::user()->profile->linkUrl }}</p>
                     <p class="text-base underline font-medium text-gray-700 mr-2"><a href="https://george-okumu.github.io/myPortfolio/">Portfolio</a></p>
                 </div>
             </div>
