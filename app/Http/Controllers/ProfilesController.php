@@ -8,11 +8,18 @@ use Illuminate\Http\Request;
 
 class ProfilesController extends Controller
 {
-    //
+    //This directs you to the loging page if one haven't logged in
+    //Evry route here is procted by the auth
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index($user){
-        $userFinded = User::find($user);
-        return view('welcome', [
-            "profile" => $userFinded,
+        // dd(User::find($user));
+        $user = User::findOrFail($user);
+        return view('profile', [
+            "profile" => $user,
         ]);
     }
 }

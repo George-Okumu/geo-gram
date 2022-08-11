@@ -22,4 +22,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/profile/{user}', '\App\Http\Controllers\ProfilesController@index')->name('profile.show');
 
+Route::get('/posts/create', '\App\Http\Controllers\PostsController@create');
+Route::post('/posts', '\App\Http\Controllers\PostsController@store');
+
 require __DIR__.'/auth.php';

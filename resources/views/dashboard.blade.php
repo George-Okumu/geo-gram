@@ -12,9 +12,16 @@
                     </span>
                 </div>
 
+
+                <div class="mt-4">
+                <span class="text-base font-semibold text-gray-700">
+                        <a href="/posts/create" class="bg-transparent hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-600 hover:border-transparent rounded">Create Post</a>
+                </span>
+                </div>
+
                 <div class="text-left pl-4 pt-3">
                     <span class="text-base font-semibold text-gray-700 mr-2">
-                        <b>220</b> posts
+                        <b>{{ Auth::user()->posts->count() }}</b> posts
                     </span>
                     <span class="text-base font-semibold text-gray-700 mr-2">
                         <b>114</b> followers
@@ -25,16 +32,15 @@
                 </div>
 
                 <div class="text-left pl-4 pt-3">
-                    <span class="text-lg font-bold text-gray-700 mr-2">{{ Auth::user()->profile->title }}</span>
+                    <span class="text-lg font-bold text-gray-700 mr-2">{{ Auth::user()->profile->title ?? "N/A" }}</span>
                 </div>
 
                 <div class="text-left pl-4 pt-3">
-                    <span class="text-lg font-bold text-gray-700 mr-2"><b>Description: </b>{{ Auth::user()->profile->description }}</span>
+                    <span class="text-lg font-bold text-gray-700 mr-2"><b>Description: </b>{{ Auth::user()->profile->description ?? "N/A"}}</span>
                 </div>
 
                 <div class="text-left pl-4 pt-3">
-                    <p class="text-base font-medium text-blue-700 mr-2">{{ Auth::user()->profile->linkUrl }}</p>
-                    <p class="text-base underline font-medium text-gray-700 mr-2"><a href="https://george-okumu.github.io/myPortfolio/">Portfolio</a></p>
+                    <p class="text-base underline font-medium text-gray-700 mr-2"><a href="{{ Auth::user()->profile->linkUrl ?? "Link not set" }}">Portfolio</a></p>
                 </div>
             </div>
         </div>

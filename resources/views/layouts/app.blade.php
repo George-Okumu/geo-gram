@@ -11,7 +11,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Scripts -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
+        <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">  -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
         <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
     </head>
     <body class="font-sans antialiased">

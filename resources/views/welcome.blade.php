@@ -55,7 +55,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 dark:text-gray-400">
-                                    <em class="font-semibold text-xl">Username: </em> {{ $profile->username }}
+                                    <em class="font-semibold text-xl">Username: </em> 
                                 </div>
                             </div>
                         </div>
