@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="flex justify-center">
         <div class="mt-8">
-            <img class="h-20 rounded-lg mr-4" src="/storage/{{Auth::user()->profile->profileImage}}" alt="Icon" />
+            <img class="h-20 rounded-lg mr-4" src=" {{Auth::user()->profile->profileImage()}}" alt="Icon" />
         </div>
         <div class="mt-4">
             <div class="w-full md:w-3/4 text-center">

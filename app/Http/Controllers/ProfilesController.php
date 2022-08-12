@@ -42,6 +42,9 @@ class ProfilesController extends Controller
             $imagePath = request('profileImage')->store("profile", "public");
             // $image = Image::make(public_path("storage/{{$imagePath}}"));
             // $imagePath->save();
+
+            $imageArray = ["profileImage"=>$imagePath]; // will store the image incase user inputs image
+
         }
 
         // dd($updatedData);
@@ -53,9 +56,10 @@ class ProfilesController extends Controller
 
         // dd($user->profile);
 
+
        $user->profile->update(array_merge(
             $updatedData,
-            ["profileImage"=>$imagePath],
+            $imageArray ?? [], // if user doesn't select an image let it be empty
         ));
 
 
