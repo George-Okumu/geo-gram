@@ -1,17 +1,16 @@
 <x-app-layout>
     <div class="flex justify-center">
         <div class="mt-8">
-            <img class="h-20 rounded-full mr-4" src="https://cdn-images-1.medium.com/fit/c/72/72/1*MotlWcSa2n6FrOx3ul89kw.png" alt="Icon" />
+            <img class="h-20 rounded-lg mr-4" src="/storage/{{Auth::user()->profile->profileImage}}" alt="Icon" />
         </div>
         <div class="mt-4">
             <div class="w-full md:w-3/4 text-center">
-                <div class="text-left pt-3">
-                    <span class="text-base text-gray-700 text-2xl mr-2">{{ Auth::user()->username }}</span>
-                    <span class="text-base font-semibold text-gray-700 mr-2">
-                        <button class="bg-transparent hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-600 hover:border-transparent rounded">Edit Profile</button>
-                    </span>
+                <div class="pt-3">
+                    <span class="text-base text-gray-700 text-2xl">{{ Auth::user()->username }}</span>
                 </div>
-
+                <div class="pt-4">
+                    <a href="/profile/{{Auth::user()->id}}/edit" class="bg-transparent hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-600 hover:border-transparent rounded">Edit Profile</a>
+                </div>
 
                 <div class="mt-4">
                 <span class="text-base font-semibold text-gray-700">

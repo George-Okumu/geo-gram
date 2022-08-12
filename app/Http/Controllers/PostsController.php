@@ -39,4 +39,14 @@ class PostsController extends Controller
          
         return redirect("/profile/" . auth()->user()->id);
     }
+
+//show a single post
+//takes in a post
+    public function show(\App\Models\Post $post){
+        // dd($post);
+        //Route model binding, better way of fetching
+        //the passed parameter variable must be the same with the the oneon the routing.
+        //\App\Models\Post $post, fetches the post automatically, also takes the place of findOrFail
+        return view("posts/show_post", compact('post'));
+    }
 }
